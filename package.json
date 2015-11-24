@@ -1,0 +1,23 @@
+{
+  "name": "fis-parser-babel-5.x",
+  "version": "1.0.0",
+  "description": "a babel 5.x parser for fis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis",
+    "parser",
+    "babel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fex-team/fis-parser-babel-5.x"
+  },
+  "author": "fis@baidu.com",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "babel-core": "5.8.34"
+  }
+}
