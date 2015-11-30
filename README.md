@@ -6,9 +6,9 @@ fis-parser-babel-5.x
 FIS2用法
 
 ```
-fis.config.set('project.fileType.text', 'es6');
-fis.config.set('modules.parser.es6', 'babel-5.x');
-fis.config.set('roadmap.ext.es6', 'js');
+fis.config.set('project.fileType.text', 'es');
+fis.config.set('modules.parser.es', 'babel-5.x');
+fis.config.set('roadmap.ext.es', 'js');
 
 fis.config.set('settings.parser.babel-5.x', {
     blacklist: ['regenerator'],
@@ -21,8 +21,8 @@ fis.config.set('settings.parser.babel-5.x', {
 FIS3用法
 
 ```
-fis.set('project.fileType.text', 'es6');
-fis.match('server/**.es6', {
+fis.set('project.fileType.text', 'es');
+fis.match('server/**.es', {
     parser: fis.plugin('babel-5.x', {
         blacklist: ['regenerator'],
         optional: ['asyncToGenerator'],
