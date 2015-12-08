@@ -13,6 +13,7 @@ fis.config.set('roadmap.ext.es', 'js');
 fis.config.set('settings.parser.babel-5.x', {
     blacklist: ['regenerator'],
     optional: ['asyncToGenerator'],
+    sourceMaps: true,
     stage: 3
 });
 ```
@@ -28,6 +29,7 @@ fis.match('server/**.es', {
         optional: ['asyncToGenerator'],
         stage: 3
     }),
+    sourceMaps: true,
     rExt: 'js'
 });
 ```

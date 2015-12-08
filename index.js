@@ -7,6 +7,22 @@ module.exports = function (content, file, conf) {
     if (conf.breakConfig === undefined) {
         conf.breakConfig = true;
     }
+
+    // 出于安全考虑，不使用原始路径
+    conf.filename = file.subpath;
     var result = babel.transform(content, conf);
+
+    // 添加resourcemap输出
+    if (result.map) {
+        var mapping = fis.file.wrap(file.dirname + '/' + file.filename + file.rExt + '.map');
+        mapping.setContent(JSON.stringify(result.map, null, 4));
+        var url = mapping.getUrl(fis.compile.settings.hash, fis.compile.settings.domain);
+        result.code = result.code.replace(/\n?\s*\/\/#\ssourceMappingURL=.*?(?:\n|$)/g, '');
+        result.code += '\n//# sourceMappingURL=' + url + '\n';
+        file.extras = file.extras || {};
+        file.extras.derived = file.extras.derived || [];
+        file.extras.derived.push(mapping);
+    }
+
     return result.code;
 };
