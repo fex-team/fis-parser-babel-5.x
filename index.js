@@ -3,6 +3,20 @@
 var babel = require('babel-core');
 
 module.exports = function (content, file, conf) {
+
+    // 添加 useBabel 配置项，如果 useBabel 为 false 则不进行编译
+    if (file.useBabel === false) {
+        return content;
+    }
+
+    // 添加 jsx 的 html 语言能力处理
+    if (fis.compile.partial && file.ext === '.jsx') {
+        content = fis.compile.partial(content, file, {
+            ext: '.html',
+            isHtmlLike: true
+        });
+    }
+
     // 默认不加载.babelrc，避免错误的加载了全局配置而非编译工具中指定的配置
     if (conf.breakConfig === undefined) {
         conf.breakConfig = true;
