@@ -12,7 +12,6 @@ fis.config.set('roadmap.ext.es', 'js');
 
 fis.config.set('settings.parser.babel-5.x', {
     blacklist: ['regenerator'],
-    optional: ['asyncToGenerator'],
     stage: 3
 });
 ```
@@ -25,7 +24,23 @@ fis.set('project.fileType.text', 'es');
 fis.match('server/**.es', {
     parser: fis.plugin('babel-5.x', {
         blacklist: ['regenerator'],
-        optional: ['asyncToGenerator'],
+        stage: 3
+    }),
+    rExt: 'js'
+});
+```
+
+## 如何编译 React
+
+Babel 默认就可以编译 React ，但是建议调整一下后缀名以适配 FIS 的资源定位能力
+
+以下例子以 FIS3 为示例，FIS2可参考调整
+
+```
+fis.set('project.fileType.text', 'jsx');
+fis.match('server/**.jsx', {
+    parser: fis.plugin('babel-5.x', {
+        blacklist: ['regenerator'],
         stage: 3
     }),
     rExt: 'js'
