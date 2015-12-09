@@ -34,8 +34,6 @@ fis.match('server/**.es', {
 
 Babel 默认就可以编译 React ，但是建议调整一下后缀名以适配 FIS 的资源定位能力
 
-以下例子以 FIS3 为示例，FIS2可参考调整
-
 ```
 fis.set('project.fileType.text', 'jsx');
 fis.match('server/**.jsx', {
@@ -46,6 +44,9 @@ fis.match('server/**.jsx', {
     rExt: 'js'
 });
 ```
+
+> FIS2 无法支持 jsx 文件内部的图片等资源文件的定位能力，因此建议在 FIS3 下使用 React
+
 
 ## 如何开启resourcemap
 
