@@ -45,6 +45,8 @@ fis.match('server/**.es', {
 });
 ```
 
+> 如果使用的是 FIS2 ，为了保证 sourcemap 的功能正常，请确认 FIS2 版本 > 1.9.3
+
 ## FIS2 下如何只为 *.es.js 开启Babel编译
 
 ```
