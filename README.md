@@ -77,3 +77,7 @@ fis.config.get('roadmap.path').unshift({
     useBabel: false // 关闭 Babel 编译
 });
 ```
+
+## DEMO
+
+https://github.com/fex-team/fis3-demo/tree/master/use-react
