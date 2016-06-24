@@ -18,6 +18,6 @@
   "author": "fis@baidu.com",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "babel-core": "5.8.34"
+    "babel-core": "6.10.4"
   }
 }
