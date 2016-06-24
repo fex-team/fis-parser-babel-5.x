@@ -1,6 +1,6 @@
 {
   "name": "fis-parser-babel-5.x",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "a babel 5.x parser for fis",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
   "author": "fis@baidu.com",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "babel-core": "6.10.4"
+    "babel-core": "5.8.38"
   }
 }
