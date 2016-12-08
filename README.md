@@ -1,6 +1,9 @@
 fis-parser-babel-5.x
 ============================
 
+
+目前 Babel 6.x 加载性能已经基本没有问题，建议可以优先尝试 https://github.com/fex-team/fis-parser-babel-6.x
+
 具体的 babel 配置参数可以参考 https://developit.github.io/babel-legacy-docs/
 
 ## FIS2用法
